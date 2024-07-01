@@ -11,5 +11,5 @@
 - CSS3
 - JavaScript (ES6)
 
-## 🚀 Demo
+## 🚀 Use
 You can play the game [here](https://ishitadutta1306.github.io/Tic-Tac-Toe/). 
