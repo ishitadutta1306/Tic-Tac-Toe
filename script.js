@@ -1,4 +1,5 @@
 let turnX=true;   //by-default 1st turn is X
+
 const winPatterns=[
     [0,1,2],    //Top row
     [3,4,5],    
@@ -11,6 +12,7 @@ const winPatterns=[
 ];
 
 let boxes=document.querySelectorAll(".box");    //9 boxes
+
 let turnInfo=document.querySelector("#turn-info");
 
 boxes.forEach((box)=>{
@@ -21,6 +23,7 @@ boxes.forEach((box)=>{
             turnX=false;    //next will be O's turn
             turnInfo.innerText="Turn for: O";   //O
         }
+            
         else{   //turn of O
             box.innerText="O";
             turnX=true;
@@ -53,6 +56,7 @@ const checkWinner=()=>{
 };
 
 let winnerInfo=document.querySelector("#winner-info");
+
 const showWinner=(winner)=>{
     winnerInfo.innerText=`Winner: ${winner}`;
     winnerInfo.style.display="block";
@@ -99,7 +103,9 @@ const enableBoxes=()=>{
 };
 
 let resetBtn=document.querySelector("#reset-btn");
+
 resetBtn.addEventListener("click",resetGame);
 
 let newGameBtn=document.querySelector("#new-game-btn");
+
 newGameBtn.addEventListener("click",resetGame);     
