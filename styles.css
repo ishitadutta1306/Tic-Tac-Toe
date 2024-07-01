@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/*Nav bar*/
+#nav-bar{
+    background-color: #A569BD;
+    height: 7.2vmin;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+}
+h1{
+    padding: 0 2.44vmin;
+    font-size: 3.5vmin;
+    font-weight: 500;   /*medium*/
+}
+
+/*Hero section*/
+#hero{
+    background-color: #F1EAFF;
+    height: 100vh;  /*100% of viewport height*/
+    padding-top: 4.44vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#game-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8vmin;
+}
+#turn-info{
+    color: black;
+    text-align: center;
+    font-size: 3.5vmin;
+    font-weight: 700;
+}
+#winner-info{
+    color: black;
+    font-size: 3.5vmin;
+    font-weight: 700;
+    display: none;
+}
+#game-container{
+    height: 60vmin; /*vmin: 1% of viewport's smaller dimension*/
+    display: grid;
+    grid-template-columns: repeat(3,18vmin);
+    grid-template-rows: repeat(3,18vmin);
+    justify-items: center;
+}
+.box{
+    background-color: #b080c5;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    color: black;
+    height: 15vmin;
+    width: 15vmin;
+    border: none;
+    font-size: 8vmin;
+    border-radius: 3vmin;
+    transition: transform 0.3s ease-in-out;
+}
+.box:hover{
+    cursor: pointer;
+}
+.box:active {
+    transform: scale(0.95);
+}
+#gameButtons{
+    width: 55vmin;
+    margin-top: 1.11vmin;
+    display: flex;
+    justify-content: space-evenly;
+}
+#reset-btn, #new-game-btn{
+    background-color: #A569BD;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.4);
+    padding: 1vmin 2vmin;
+    border-radius: 2vmin;
+    border: none;
+    font-size: 2.3vmin;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+#reset-btn:active, #new-game-btn:active{
+    transform: scale(0.95);
+}
+
+/*Footer*/
+#footer{
+    background-color: #ada8b7;
+    height: 7.3vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer a{
+    margin: 1.11vmin;
+    color: #010409;
+    font-size: 3.5vmin;
+}
+#footer p{
+    text-align: center;
+    font-size: 2.1vmin;
+    font-weight: 500;
+}
+
+@media (max-width: 600px){
+    h1{
+        font-size: 5vmin;
+    }
+    #hero{
+        padding-top: 1vmin;
+    }
+    #turn-info, #winner-info{
+        font-size: 5vmin;
+    }
+    #game-container{
+        height: 80vmin;
+        grid-template-columns: repeat(3,28vmin);
+        grid-template-rows: repeat(3,28vmin);
+    }
+    .box{
+        height: 23vmin;
+        width: 23vmin;
+        font-size: 12vmin;
+    }
+    #gameButtons{
+        margin-top: 10vmin;
+        width: 75vmin;
+    }
+    #reset-btn, #new-game-btn{
+        padding: 2vmin 3vmin;
+        font-size: 4vmin;
+        z-index: 1;
+    }
+    #footer p{
+        font-size: 3vmin;
+    }
+}   
